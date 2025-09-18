@@ -2,6 +2,8 @@
 
 A beautiful, animated web-based raffle system that reads participant names from your `names.txt` file and selects winners with smooth spinning animations.
 
+> Ideal tool for the raffles on the conferences - no storing and no tracking of the participants, just a simple and fun raffle experience.
+
 ![Main Raffle UI](assets/raffle-ui.png)
 
 ![Winner UI](assets/winner.png)

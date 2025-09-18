@@ -32,6 +32,11 @@ This is a web-based raffle/drawing system for CKEditor-related participants. The
 2. Edit `names.txt` to include your participant names (comma-separated format)
 3. Open `index.html` directly in a web browser
 
+### Commands
+- `npm start` - Start development server with Vite (optional, for live reload)
+- `npm run build` - Build the application using Vite
+- `npm run prepare-name` - Copy sample names file to names.txt
+
 ### Running the Application
 Open `index.html` directly in a web browser - no build process or server required.
 
