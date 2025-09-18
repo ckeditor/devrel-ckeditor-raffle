@@ -240,6 +240,8 @@ header h1 {
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
     animation: winnerPulse 2s ease-in-out infinite alternate;
+    position: relative;
+    overflow: hidden;
 }
 
 @keyframes winnerPulse {
@@ -265,6 +267,35 @@ header h1 {
     font-size: 1.3em;
     color: #555;
     font-style: italic;
+}
+
+.prize-image {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    margin: 20px auto;
+    padding: 20px;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    animation: prizeReveal 1s ease-out forwards;
+    transform: scale(0) rotate(-180deg);
+    opacity: 0;
+}
+
+@keyframes prizeReveal {
+    0% {
+        transform: scale(0) rotate(-180deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1) rotate(-10deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
 }
 
 .previous-winners {
