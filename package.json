@@ -1,0 +1,15 @@
+{
+  "name": "ckeditor-raffle",
+  "version": "1.0.0",
+  "description": "A beautiful, animated web-based raffle system that reads participant names from your `names.txt` file and selects winners with smooth spinning animations.",
+  "author": "CKSource (http://cksource.com/)",
+  "license": "SEE LICENSE.md",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "prepare-name": "cp names.sample.txt names.txt && echo 'You can now edit names.txt to add your participants.'"
+  },
+  "devDependencies": {
+    "vite": "^4.4.9"
+  }
+}

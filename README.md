@@ -2,21 +2,31 @@
 
 A beautiful, animated web-based raffle system that reads participant names from your `names.txt` file and selects winners with smooth spinning animations.
 
+![Main Raffle UI](assets/raffle-ui.png)
+
+![Winner UI](assets/winner.png)
+
+These visuals demonstrate the smooth animations, responsive design, and celebratory winner reveal featured in the application.
+
+## Quick Start
+
+1. Install dependencies: `npm install`
+2. Set up participant names: `npm run prepare-name` (copies sample names `names.sample.txt` to `names.txt`)
+3. Edit `names.txt` to add your own participants
+4. Start the development server: `npm start`
+5. The raffle will automatically load names from `names.txt`
+6. Click "Start Raffle" or press spacebar to begin
+7. Watch the spinning animation and celebrate the winner!
 ## Features
 
 - **Smooth Animations**: Slot machine-style spinning effect with gradual slowdown
 - **Fair Selection**: Uses cryptographically secure random number generation
 - **Winner Celebration**: Confetti animation and winner highlight
 - **Multiple Rounds**: Track previous winners and run multiple drawings
-- **Responsive Design**: Works on desktop and mobile devices
 - **Keyboard Support**: Press spacebar to start the raffle
 
-## Quick Start
-
-1. Open `index.html` in your web browser
-2. The raffle will automatically load names from `names.txt`
-3. Click "Start Raffle" or press spacebar to begin
-4. Watch the spinning animation and celebrate the winner!
+## Alternative: Direct File Access
+You can also open `index.html` directly in your web browser without running npm commands.
 
 ## File Structure
 
@@ -30,9 +40,9 @@ A beautiful, animated web-based raffle system that reads participant names from 
 
 The raffle automatically parses your `names.txt` file which uses the format:
 ```
-1→Brandon Wood,
-2→Manasseh Abijah,
-3→sarah etzl,
+Brandon Wood,
+Manasseh Abijah,
+sarah etzl,
 ...
 ```
 
@@ -77,15 +87,6 @@ Modify `styles.css` for:
 
 ### Participant Management
 - Replace `names.txt` with your own participant list
-- Maintains the same format: `number→Name,`
-- Supports 100-200+ participants efficiently
-
-## Technical Details
-
-- **Pure JavaScript**: No frameworks or dependencies required
-- **Secure Randomization**: Uses `crypto.getRandomValues()` for fair selection  
-- **Performance Optimized**: Efficient animations with CSS transforms
-- **Cross-Browser**: Compatible with modern browsers
-- **Local File System**: Works offline, no server required
+- Supports 100+ participants efficiently
 
 Enjoy your raffle! 🎲✨
