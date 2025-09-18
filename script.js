@@ -89,33 +89,42 @@ class RaffleService {
 
     slowDownAndStop() {
         clearInterval(this.spinInterval);
-        
+
         this.wheelContainer.parentElement.classList.remove('spinning');
         this.wheelContainer.parentElement.classList.add('slowing');
-        
+
+        // Pre-select the winner to ensure animation stops on them
+        const winnerIndex = this.getSecureRandomIndex();
+        const winner = this.participants[winnerIndex];
+
         let slowSpinSpeed = 100;
         let iterations = 0;
         const maxIterations = 20;
-        
+
         const slowSpinInterval = setInterval(() => {
             this.nameDisplay.textContent = this.participants[this.currentNameIndex];
             this.currentNameIndex = (this.currentNameIndex + 1) % this.participants.length;
-            
+
             iterations++;
             slowSpinSpeed += 20;
-            
+
             if (iterations >= maxIterations) {
                 clearInterval(slowSpinInterval);
-                setTimeout(() => this.selectWinner(), 500);
+                // Land on the pre-selected winner
+                this.nameDisplay.textContent = winner;
+                setTimeout(() => this.selectWinner(winner), 500);
             }
         }, slowSpinSpeed);
     }
 
-    selectWinner() {
-        const winnerIndex = this.getSecureRandomIndex();
-        const winner = this.participants[winnerIndex];
-        
-        this.nameDisplay.textContent = winner;
+    selectWinner(winner) {
+        // If winner is already provided, use it; otherwise generate one
+        if (!winner) {
+            const winnerIndex = this.getSecureRandomIndex();
+            winner = this.participants[winnerIndex];
+            this.nameDisplay.textContent = winner;
+        }
+
         this.winnerName.textContent = winner;
         
         this.wheelContainer.parentElement.classList.remove('slowing');
