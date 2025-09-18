@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKEditor Raffle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎉 CKEditor Raffle 🎉</h1>
+            <p class="subtitle">May the odds be ever in your favor!</p>
+        </header>
+
+        <main>
+            <div class="raffle-section">
+                <div class="participants-info">
+                    <div class="info-card">
+                        <span class="label">Total Participants:</span>
+                        <span id="participant-count">0</span>
+                    </div>
+                </div>
+
+                <div class="raffle-wheel">
+                    <div class="wheel-container">
+                        <div id="name-display" class="name-display">
+                            <div class="current-name">Click Start to Begin!</div>
+                        </div>
+                        <div class="wheel-glow"></div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="start-raffle" class="btn primary">
+                        <span class="btn-text">Start Raffle</span>
+                        <span class="btn-icon">🎲</span>
+                    </button>
+                    <button id="reset-raffle" class="btn secondary" style="display: none;">
+                        Reset
+                    </button>
+                </div>
+
+                <div id="winner-section" class="winner-section" style="display: none;">
+                    <div class="winner-card">
+                        <h2>🏆 Winner! 🏆</h2>
+                        <div id="winner-name" class="winner-name"></div>
+                        <div class="celebration-text">Congratulations!</div>
+                    </div>
+                </div>
+
+                <div id="previous-winners" class="previous-winners" style="display: none;">
+                    <h3>Previous Winners</h3>
+                    <div id="winners-list" class="winners-list"></div>
+                </div>
+            </div>
+        </main>
+
+        <div id="confetti-container" class="confetti-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
