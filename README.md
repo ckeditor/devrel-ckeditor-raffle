@@ -67,11 +67,6 @@ The system handles:
 - Click "Reset" to clear all previous winners
 - Run unlimited rounds with the same participant pool
 
-### Mobile Support
-- Fully responsive design works on all devices
-- Touch-friendly buttons and interactions
-- Optimized animations for mobile performance
-
 ## Customization
 
 ### Animation Timing
